@@ -1,0 +1,181 @@
+﻿<Window x:Class="LookyEyes.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"        
+        xmlns:vm="clr-namespace:LookyEyes.ViewModels"
+        xmlns:local="clr-namespace:LookyEyes"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        d:DataContext="{d:DesignInstance d:Type=vm:KinectBaseViewModel}"
+        xmlns:XAMLHelpers="clr-namespace:FiveTwoFiveTwo.XAMLHelpers" >
+
+    <Window.Resources>
+
+
+
+        <!--http://www.xamalot.com/asset/4de023b0-99fd-470f-a868-c94cec96074a-->
+        <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:PresentationOptions="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options">
+
+            <SolidColorBrush x:Key="MediumGreyBrush" Color="#ff6e6e6e" />
+            <SolidColorBrush x:Key="KinectPurpleBrush" Color="#ff52318f" />
+            <SolidColorBrush x:Key="KinectBlueBrush" Color="#ff00BCF2" />
+            <Style TargetType="{x:Type Image}">
+                <Setter Property="SnapsToDevicePixels" Value="True" />
+            </Style>
+            <Style TargetType="{x:Type Button}" x:Key="ScreenshotButton" >
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Grid>
+                                <StackPanel Orientation="Horizontal" Background="Transparent">
+                                    <TextBlock x:Name="ScreenshotText" Text="{TemplateBinding Content}" TextAlignment="Left"  VerticalAlignment="Center" Foreground="{StaticResource KinectPurpleBrush}" FontSize="15" />
+                                    <Grid Margin="9,0,0,0">
+                                        <Image x:Name="ScreenshotNormal" Source="Images\ScreenshotNormal.png" Stretch="None" HorizontalAlignment="Center" />
+                                        <Image x:Name="ScreenshotHover" Source="Images\ScreenshotHover.png" Stretch="None" HorizontalAlignment="Center" Visibility="Collapsed" />
+                                    </Grid>
+                                </StackPanel>
+                            </Grid>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsMouseOver" Value="true">
+                                    <Setter Property="Visibility" Value="Collapsed" TargetName="ScreenshotNormal" />
+                                    <Setter Property="Visibility" Value="Visible" TargetName="ScreenshotHover" />
+                                    <Setter Property="Foreground" Value="{StaticResource KinectBlueBrush}" TargetName="ScreenshotText" />
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <SolidColorBrush x:Key="Brush1" Color="Black" ></SolidColorBrush>
+            <DrawingBrush x:Key="tonlima_Olhos_Verdes_Green_Eye" >
+                <DrawingBrush.Drawing>
+                    <DrawingGroup>
+                        <DrawingGroup>
+                            <DrawingGroup.Transform>
+                                <MatrixTransform Matrix="1,0,0,1,-225.214279174805,-427.862182617188"/>
+                            </DrawingGroup.Transform>
+                            <DrawingGroup>
+                                <DrawingGroup>
+                                    <DrawingGroup.Transform>
+                                        <MatrixTransform Matrix="1,0,0,1,-466.071441650391,-170.785690307617"/>
+                                    </DrawingGroup.Transform>
+                                    <DrawingGroup>
+                                        <DrawingGroup>
+                                            <DrawingGroup>
+                                                <DrawingGroup.Transform>
+                                                    <MatrixTransform Matrix="0.343211799860001,0,0,0.343211799860001,659.587646484375,483.277954101563"/>
+                                                </DrawingGroup.Transform>
+                                            </DrawingGroup>
+                                            <DrawingGroup>
+                                                <DrawingGroup.Transform>
+                                                    <MatrixTransform Matrix="0.192771002650261,0,0,0.192771002650261,700.314147949219,560.680480957031"/>
+                                                </DrawingGroup.Transform>
+                                                <GeometryDrawing Brush="Black" Geometry="F1M448.571,514.505A177.857,177.857,0,1,1,92.857,514.505A177.857,177.857,0,1,1,448.571,514.505z"/>
+                                            </DrawingGroup>
+                                            <DrawingGroup>
+                                                <DrawingGroup.Transform>
+                                                    <MatrixTransform Matrix="0.18549670279026,0,0,0.18549670279026,702.283386230469,564.423156738281"/>
+                                                </DrawingGroup.Transform>
+                                                <GeometryDrawing Geometry="F1M448.571,514.505A177.857,177.857,0,1,1,92.857,514.505A177.857,177.857,0,1,1,448.571,514.505z">
+                                                    <GeometryDrawing.Brush>
+                                                        <RadialGradientBrush Center="270.714,514.505" GradientOrigin="270.714,514.505" MappingMode="Absolute" RadiusY="177.857" RadiusX="177.857">
+                                                            <RadialGradientBrush.Transform>
+                                                                <MatrixTransform Matrix="1,0,0,1,2.2238213205128E-05,4.35755009675631E-06"/>
+                                                            </RadialGradientBrush.Transform>
+                                                            <GradientStop Color="#FF2DFF83" Offset="0"/>
+                                                            <GradientStop Color="#FF009704" Offset="1"/>
+                                                        </RadialGradientBrush>
+                                                    </GeometryDrawing.Brush>
+                                                </GeometryDrawing>
+                                            </DrawingGroup>
+                                            <DrawingGroup>
+                                                <DrawingGroup.Transform>
+                                                    <MatrixTransform Matrix="0.0642570480704308,0,0,0.0642570480704308,735.104675292969,626.801574707031"/>
+                                                </DrawingGroup.Transform>
+                                                <GeometryDrawing Brush="Black" Geometry="F1M448.571,514.505A177.857,177.857,0,1,1,92.857,514.505A177.857,177.857,0,1,1,448.571,514.505z"/>
+                                            </DrawingGroup>
+                                        </DrawingGroup>
+                                    </DrawingGroup>
+                                </DrawingGroup>
+                            </DrawingGroup>
+                        </DrawingGroup>
+                    </DrawingGroup>
+                </DrawingBrush.Drawing>
+                <DrawingBrush.RelativeTransform>
+                    <TransformGroup>
+                        <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                        <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                        <RotateTransform Angle="-43.831" CenterY="0.5" CenterX="0.5"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </DrawingBrush.RelativeTransform>
+            </DrawingBrush>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Viewbox Grid.Row="1" HorizontalAlignment="Center">
+            
+            <Grid Name="CompositeImage">
+                <Grid.LayoutTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform />
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Grid.LayoutTransform>
+
+                <Image Source="{Binding ImageSource}" Stretch="UniformToFill" />
+                <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="74,166,0,0">
+                    <Ellipse Width="180" Height="180" HorizontalAlignment="Center" VerticalAlignment="Center" Fill="AliceBlue"></Ellipse>
+                    <Rectangle Fill="{StaticResource tonlima_Olhos_Verdes_Green_Eye}" Width="80" Height="80" RenderTransformOrigin="0.5,0.5">
+                        <Rectangle.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform/>
+                                <TranslateTransform X="{Binding TrackedHeadX}" Y="{Binding TrackedHeadY}"/>
+
+                            </TransformGroup>
+                        </Rectangle.RenderTransform>
+
+                    </Rectangle>
+                </Grid>
+                
+                <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="260,158,0,0">
+                    <Ellipse Width="180" Height="180" HorizontalAlignment="Center" VerticalAlignment="Center" Fill="AliceBlue" Margin="0,10,0,-10"></Ellipse>
+                    <Rectangle Fill="{StaticResource tonlima_Olhos_Verdes_Green_Eye}" Width="80" Height="80" RenderTransformOrigin="0.5,0.5" Margin="50,58,50,42">
+                        <Rectangle.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform/>
+                                <TranslateTransform X="{Binding TrackedHeadX}" Y="{Binding TrackedHeadY}"/>
+
+                            </TransformGroup>
+                        </Rectangle.RenderTransform>
+
+                    </Rectangle>
+
+                </Grid>
+
+                <Image  HorizontalAlignment="Left" VerticalAlignment="Top" Panel.ZIndex="1" Source="Images/JackOLantern.png" Margin="10,0,-10.2,0.2" ></Image>
+            </Grid>
+        </Viewbox>
+
+        <Button Grid.Row="2" Style="{StaticResource ScreenshotButton}" Command="{Binding ScreenshotCommand}" Content="Screenshot" Height="Auto" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10 10 0 10"/>
+
+
+        <StatusBar Grid.Row="3" HorizontalAlignment="Stretch" Name="statusBar" VerticalAlignment="Bottom" Background="White" Foreground="{StaticResource MediumGreyBrush}">
+            <StatusBarItem Content="{Binding StatusText}" />
+        </StatusBar>
+    </Grid>
+
+</Window>
